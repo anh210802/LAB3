@@ -14,7 +14,7 @@ void fsm_traffic_light(){
 			clearAllLed();
 			fsm_status = RED_GREEN;
 			setTimer1(RED_GREEN_PREIOD + green_add); 	// Set timer for normal traffic light
-			setTimer2(100); 							// Set timer for counter of led 7 segment
+			setTimer2(1000); 							// Set timer for counter of led 7 segment
 			setTimer3(TIMER_LED); 						// Set timer for blink with frequency 2Hz
 			counter1_7_segment = (RED_GREEN_PREIOD + RED_AMBER_PREIOD + red_add) / FREQUENCY_SYSTEM; // Create timer of led 7 segment
 			counter2_7_segment = (RED_GREEN_PREIOD + green_add) / FREQUENCY_SYSTEM; // Create timer of led 7 segment
@@ -30,7 +30,7 @@ void fsm_traffic_light(){
 				timer2_flag = 0;
 				fsm_status = RED_AMBER;
 				setTimer1(RED_AMBER_PREIOD + amber_add);
-				setTimer2(100);
+				setTimer2(1000);
 				counter1_7_segment = (RED_AMBER_PREIOD + amber_add) / FREQUENCY_SYSTEM;
 				counter2_7_segment = (RED_AMBER_PREIOD + amber_add) / FREQUENCY_SYSTEM;
 			}
@@ -39,7 +39,7 @@ void fsm_traffic_light(){
 			if(timer2_flag == 1){
 				counter1_7_segment--;
 				counter2_7_segment--;
-				setTimer2(100);
+				setTimer2(1000);
 			}
 			/*****************************/
 			/* Change status to modify time status*/
@@ -65,7 +65,7 @@ void fsm_traffic_light(){
 				timer2_flag = 0;
 				fsm_status = GREEN_RED;
 				setTimer1(RED_GREEN_PREIOD + green_add);
-				setTimer2(100);
+				setTimer2(1000);
 				counter1_7_segment = (RED_GREEN_PREIOD + green_add) / FREQUENCY_SYSTEM;
 				counter2_7_segment = (RED_GREEN_PREIOD + RED_AMBER_PREIOD + red_add) / FREQUENCY_SYSTEM;
 			}
@@ -74,7 +74,7 @@ void fsm_traffic_light(){
 			if(timer2_flag == 1){
 				counter1_7_segment--;
 				counter2_7_segment--;
-				setTimer2(100);
+				setTimer2(1000);
 			}
 			/*****************************/
 			/* Change status to modify time status*/
@@ -99,7 +99,7 @@ void fsm_traffic_light(){
 				timer2_flag = 0;
 				fsm_status = RED_AMBER;
 				setTimer1(RED_AMBER_PREIOD + amber_add);
-				setTimer2(100);
+				setTimer2(1000);
 				counter1_7_segment = (RED_AMBER_PREIOD + amber_add) / FREQUENCY_SYSTEM;
 				counter2_7_segment = (RED_AMBER_PREIOD + amber_add) / FREQUENCY_SYSTEM;
 			}
@@ -108,7 +108,7 @@ void fsm_traffic_light(){
 			if(timer2_flag == 1){
 				counter1_7_segment--;
 				counter2_7_segment--;
-				setTimer2(100);
+				setTimer2(1000);
 			}
 			/*****************************/
 			/* Change status to modify time status*/
@@ -133,7 +133,7 @@ void fsm_traffic_light(){
 				timer2_flag = 0;
 				fsm_status = RED_GREEN;
 				setTimer1(RED_GREEN_PREIOD + green_add);
-				setTimer2(100);
+				setTimer2(1000);
 				counter1_7_segment = (RED_GREEN_PREIOD + RED_AMBER_PREIOD + red_add) / FREQUENCY_SYSTEM;
 				counter2_7_segment = (RED_AMBER_PREIOD + amber_add) / FREQUENCY_SYSTEM;
 			}
@@ -142,7 +142,7 @@ void fsm_traffic_light(){
 			if(timer2_flag == 1){
 				counter1_7_segment--;
 				counter2_7_segment--;
-				setTimer2(100);
+				setTimer2(1000);
 			}
 			/*****************************/
 			/* Change status to modify time status*/
@@ -238,7 +238,7 @@ void fsm_traffic_light(){
 				clearAllLed();
 				fsm_status = RED_GREEN;
 				setTimer1(RED_GREEN_PREIOD + green_add);
-				setTimer2(100);
+				setTimer2(1000);
 				setTimer3(TIMER_LED);
 				counter1_7_segment = (RED_GREEN_PREIOD + RED_AMBER_PREIOD + red_add) / FREQUENCY_SYSTEM;
 				counter2_7_segment = (RED_GREEN_PREIOD + green_add) / FREQUENCY_SYSTEM;
