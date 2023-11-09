@@ -100,11 +100,7 @@ int main(void)
   setTimer0(1000);
   while (1)
   {
-	  //fsm_traffic_light();
-	  if(timer0_flag == 1){
-		  HAL_GPIO_TogglePin(LED0_AMBER_GPIO_Port, LED0_AMBER_Pin);
-		  setTimer0(1000);
-	  }
+	  fsm_traffic_light();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
