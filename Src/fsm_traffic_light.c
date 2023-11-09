@@ -151,7 +151,7 @@ void fsm_traffic_light(){
 				fsm_status = MAN_RED;
 				timer1_flag = 0;
 				timer2_flag = 0;
-				counter1_7_segment = 1;
+				counter1_7_segment = 2;
 				counter2_7_segment = (RED_GREEN_PREIOD + RED_AMBER_PREIOD + red_add) / FREQUENCY_SYSTEM;
 			}
 			/*****************************/
@@ -171,7 +171,7 @@ void fsm_traffic_light(){
 			if(isButton1Pressed() == 1){
 				clearAllLed();
 				fsm_status = MAN_AMBER;
-				counter1_7_segment = 2;
+				counter1_7_segment = 3;
 				counter2_7_segment = (RED_AMBER_PREIOD + amber_add) / FREQUENCY_SYSTEM;
 			}
 			/*****************************/
@@ -204,7 +204,7 @@ void fsm_traffic_light(){
 			if(isButton1Pressed() == 1){
 				clearAllLed();
 				fsm_status = MAN_GREEN;
-				counter1_7_segment = 3;
+				counter1_7_segment = 4;
 				counter2_7_segment = (RED_GREEN_PREIOD + green_add) / FREQUENCY_SYSTEM;
 			}
 			/*****************************/
