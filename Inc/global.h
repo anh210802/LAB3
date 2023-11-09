@@ -12,8 +12,8 @@
  *
  * */
 #define FREQUENCY_SYSTEM	1000
-#define TIMER_LED			500
-#define TIMER_7_SEGMENT		500
+#define TIMER_LED			    500
+#define TIMER_7_SEGMENT		250
 
 #define RED_GREEN_PREIOD 	10000
 #define RED_AMBER_PREIOD	5000
